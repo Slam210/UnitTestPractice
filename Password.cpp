@@ -25,6 +25,9 @@ int Password::count_leading_characters(string phrase) {
 bool Password::has_mixed_case(string phrase) {
   bool uppercase = false;
   bool lowercase = false;
+  if (phrase == "") {
+    return false;
+  }
   for (char c : phrase) {
     if (c >= 'a' && c <= 'z') {
       lowercase = true;

@@ -121,3 +121,9 @@ TEST(PasswordTest, onlyLowercaseWithNumbers) {
   bool actual = my_password.has_mixed_case("abc123");
   ASSERT_EQ(false, actual);
 }
+
+TEST(PasswordTest, emptyString) {
+  Password my_password;
+  bool actual = my_password.has_mixed_case("");
+  ASSERT_EQ(false, actual);
+}
